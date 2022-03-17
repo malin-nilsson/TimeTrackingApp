@@ -368,7 +368,6 @@
         max-width: 100px;
         max-height: 100px;
     }
-
 }
 
 .user-image img {
@@ -381,7 +380,6 @@
     @include mixins.tablet-only {
         max-height: 200px;
     }
-
 }
 
 .form {
@@ -395,8 +393,6 @@
         padding: 10px 18px;
     }
 }
-
-
 
 // DROPDOWN CATEGORY MENU
 
@@ -515,7 +511,6 @@
             width: 40%;
         }
     }
-
 
     @include mixins.desktop-only {
         display: none;

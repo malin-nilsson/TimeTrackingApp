@@ -1,0 +1,59 @@
+<div class="community-wrapper">
+    <div class="community-overlay">
+
+        <div class="community">
+            <div class="desktop-header">
+                <div class="logo-container">
+                    <img src="/assets/logo-white.png" alt="">
+                </div>
+                <div class="buttons-container">
+                    <a href="/users/{{user._id}}/dashboard" class="logout-btn">Home</a>
+                    <a href="/forum/{{user._id}}" class="logout-btn">Forum</a>
+                    <a href="/users/signout" class="logout-btn">Logout</a>
+                </div>
+            </div>
+
+            <!-- FORUM FORM -->
+            <div class="forum-form-container">
+                <div class="forum-heading">
+                    <h1>Forum</h1>
+                </div>
+                <h2>Add a post</h2>
+                <div class="forum-form">
+                    <form action="/forum/{{user._id}}" method="post">
+                        <label for="title">Title*</label>
+                        <input type="text" name="title" placeholder="Title">
+                        <label for="post">Comment*</label>
+                        <textarea name="post" placeholder="Comment..."></textarea>
+                        <input type="submit" value="Post" class="forum-btn">
+                    </form>
+                </div>
+
+                <div class="forum-links">
+                    <a href="/forum/{{user._id}}/list">My posts</a>
+                    <a href="/forum/{{user._id}}">All Posts</a>
+                </div>
+
+                <div class="forum-feed">
+                    {{#each forumPosts}}
+                    <div class="forum-post-container">
+                        <div class="user-image">
+                            <img src="{{user.profilePicture}}" alt="Profile picture of user" />
+                        </div>
+                        <div class="post">
+                            <p>
+                                <span class="post-username">@{{user.username}}</span>
+                            </p>
+                            <p>
+                                <span class="post-title">{{title}}</span>
+
+                            </p>
+                            <p class="comment">{{post}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

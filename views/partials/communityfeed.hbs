@@ -1,0 +1,47 @@
+<div class="community-wrapper">
+    <div class="community-overlay">
+
+        <div class="community">
+
+            <div class="desktop-header">
+                <div class="logo-container">
+                    <img src="/assets/logo-white.png" alt="">
+                </div>
+                <div class="buttons-container">
+                    <a href="/users/{{user._id}}/dashboard" class="logout-btn">Home</a>
+                    <a href="/forum/{{user._id}}" class="logout-btn">Forum</a>
+                    <a href="/users/signout" class="logout-btn">Logout</a>
+                </div>
+            </div>
+
+            <div class="forum-form-container">
+                <div class="home-heading">
+                    <h1>Home</h1>
+
+                </div>
+                {{#each publicTasks}}
+                <div class="user-post-container">
+
+                    <div class="user-post">
+                        <div class="user-image">
+                            <img src="{{user.profilePicture}}" alt="Profile picture of user" />
+                        </div>
+                        <div class="user-comment">
+                            <p>
+                                <span class="bold">@{{user.username}}</span>
+                                added
+                                <span class="time">
+                                    {{hours}}</span>
+                                hours to:
+                                {{category}}
+                            </p>
+                            <p class="comment">{{description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+    </div>
+</div>

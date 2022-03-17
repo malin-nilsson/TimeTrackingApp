@@ -1,0 +1,214 @@
+@use "../mixins";
+@use "../variables";
+
+.forum-form-container {
+    width: 100%;
+    margin: 0 auto;
+
+    @include mixins.tablet-only {
+        width: 90%;
+    }
+
+    @include mixins.desktop-only {
+        width: 100%;
+        padding: 50px 0px 0px;
+
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        color: variables.$color-paleblue;
+        font-size: 1.6rem;
+    }
+
+    label {
+        color: #fff;
+        margin: 5px 0px;
+    }
+
+    input {
+        border-radius: 4px;
+        border: 2px solid #22277a;
+        padding: 5px;
+        background-color: variables.$color-verydkblue;
+        color: #fff;
+        margin: 5px 0px;
+    }
+
+    textarea {
+        display: block;
+        margin: 5px 0px;
+        border-radius: 5px;
+        border: 2px solid #22277a;
+        background-color: variables.$color-verydkblue;
+        color: #fff;
+        height: 5rem;
+        width: 100%;
+        padding: 5px;
+
+        &:focus {
+            outline: none;
+        }
+
+        @include mixins.desktop-only {
+            padding: 10px;
+            height: 10rem;
+            width: 100%;
+            font-size: 1.1rem;
+
+        }
+
+    }
+
+
+
+    .forum-btn {
+        padding: 10px;
+        background-color: variables.$color-purple;
+        border: none;
+        color: #fff;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+        padding: 10px;
+        width: 100%;
+        margin: 10px auto;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #453aa9;
+        }
+
+        @include mixins.desktop-only {
+            width: 7rem;
+        }
+    }
+
+
+
+}
+
+.forum-heading {
+    color: variables.$color-purple;
+    margin: 0px auto 20px;
+    width: 100%;
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+}
+
+.public-tasks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.forum-feed {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px 0px 0px;
+    gap: 30px;
+}
+
+.forum-post-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(19, 18, 18, 0.5);
+    border: 2px solid rgb(21, 14, 39, 0.5);
+    border-radius: 7px;
+    box-shadow: 0 20px 40px rgba(40, 6, 117, 0.5);
+    padding: 10px;
+
+    @include mixins.tablet-only {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    @include mixins.tablet-only {
+        gap: 30px;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .post-title {
+        font-size: 1.2rem;
+    }
+
+
+
+    .post {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding: 10px;
+
+        p {
+            margin: 2px 0px;
+        }
+    }
+
+    .post-buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        gap: 20px;
+
+        svg {
+            height: 20px;
+            width: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .post-username {
+        font-size: 0.9rem;
+    }
+
+
+}
+
+.forum-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: row;
+    padding: 20px 0px;
+
+    a {
+        font-size: 1.2rem;
+        text-decoration: underline;
+        font-weight: 300;
+    }
+}
+
+
+.post-comment {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}

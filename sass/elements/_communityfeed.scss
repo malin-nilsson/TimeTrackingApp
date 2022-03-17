@@ -1,0 +1,180 @@
+@use "../mixins";
+@use "../variables";
+
+.community-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+
+    @include mixins.tablet-only {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    @include mixins.desktop-only {
+        width: 70%;
+        padding: 20px 50px 50px 100px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+
+    .community {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+
+        @include mixins.tablet-only {
+            gap: 0px;
+
+        }
+    }
+
+    .logout {
+        text-align: right;
+        padding: 0px 30px;
+
+    }
+
+    a {
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+
+    .user-post-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 0px;
+    }
+
+    .user-post {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+
+        @include mixins.tablet-only {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        @include mixins.desktop-only {
+            gap: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .user-comment {
+            width: 100%;
+            background-color: rgba(19, 18, 18, 0.5);
+            color: #fff;
+            padding: 5px;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            border: 2px solid rgb(21, 14, 39, 0.5);
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            @include mixins.tablet-only {
+                padding: 10px;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0px;
+                box-shadow: 0 20px 40px rgba(40, 6, 117, 0.5);
+            }
+
+            @include mixins.desktop-only {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+            }
+        }
+
+        p {
+            margin: 0;
+            text-align: left;
+        }
+
+        .bold {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin: 0px 5px 0px 0px;
+
+            @include mixins.desktop-only {
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+    .time {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0px 5px;
+        color: variables.$color-paleblue;
+    }
+
+}
+
+.desktop-header {
+    display: none;
+
+    @include mixins.desktop-only {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+
+    .logo-container {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px 40px;
+    }
+
+    .logo-container img {
+        width: 50%;
+    }
+}
+
+.buttons-container {
+    display: none;
+
+    @include mixins.desktop-only {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-end;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.home-heading {
+    color: variables.$color-purple;
+    margin: 0px auto 20px;
+    width: 100%;
+
+    h1 {
+        font-size: 2rem;
+    }
+}

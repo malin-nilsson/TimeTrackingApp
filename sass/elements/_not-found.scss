@@ -1,0 +1,35 @@
+@use "../mixins";
+@use "../variables";
+
+.not-found-container {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    gap: 30px;
+
+    .not-found {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    .back-btn {
+        padding: 12px 30px;
+        background-color: variables.$color-purple;
+        border: none;
+        color: #fff;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 1.4rem;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

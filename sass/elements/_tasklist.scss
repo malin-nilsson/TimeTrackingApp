@@ -1,0 +1,96 @@
+@use "../mixins";
+@use "../variables";
+
+
+.tasks-container {
+    border-radius: 8px;
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .tasks-info-container {
+        width: 100%;
+        background-color: variables.$color-dkblue;
+        border-radius: 8px;
+        padding: 10px 15px;
+
+    }
+
+    .task-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .category-hours-average {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .task-hours {
+        color: variables.$color-paleblue;
+        font-size: 0.9rem;
+        margin: 0px;
+
+        .hours {
+            font-weight: 100;
+            font-size: 0.8rem;
+            margin: 0px 4px;
+        }
+    }
+
+
+    svg:hover {
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .tasks {
+        border-radius: 8px;
+        background-color: variables.$color-dkblue;
+        width: 100%;
+        margin: 5px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        a {
+            text-decoration: none
+        }
+
+        .task {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0px;
+            background-color: variables.$color-dkblue;
+            padding: 10px 15px;
+
+            &:hover {
+                background-color: rgba(0, 0, 7, 0.5);
+                cursor: pointer;
+            }
+
+            .task-description,
+            .task-comment,
+            .task-date {
+                font-size: 0.9rem;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .task-comment,
+            .task-date {
+                font-weight: 100;
+            }
+        }
+    }
+}

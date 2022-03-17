@@ -1,0 +1,24 @@
+<div class="content">
+    <div class="logo-container-signup">
+        <img src="/assets/logo-white.png" alt="">
+    </div>
+    <form action="/users/signup" method="post" enctype="multipart/form-data" class="signup-form">
+        <h1>Sign up</h1>
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Username" value="{{username}}" />
+        <p class="error-message">{{usernameTaken}}</p>
+        <p class="error-message">{{errorMessage.error}}</p>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Password" />
+        <label for="password">Confirm password</label>
+        <input type="password" name="confirmPassword" placeholder="Confirm password" />
+        <p class="error-message">{{errorMessage.error3}}</p>
+        <label for="email">Email</label>
+        <input type="text" name="email" placeholder="Email" value="{{email}}" />
+        <p class="error-message">{{errorMessage.error2}}</p>
+        <label for="profilePic">Profile picture</label>
+        <input type="file" name="profilePic" id="profilePic" placeholder="Profile Picture" />
+
+        <input type="submit" class="login-btn" value="Sign up" />
+    </form>
+</div>

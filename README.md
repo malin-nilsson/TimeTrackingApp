@@ -27,6 +27,6 @@ Visit localhost:8000 to view the project
 This was a school group project built with Node.js where our goal was to create a time tracking app where users could perform all CRUD operations on tracked hours as well as on forum posts. In this project we also implemented Google login authentication using Passport.js
 
 ## Contributors
-Malin Nilsson </br>
-Alexander Hall </br>
-Jesper Lind
+[Malin Nilsson](https://github.com/malin-nilsson) </br>
+[Alexander Hall](https://github.com/Alexandrhall) </br>
+[Jesper Lind](https://github.com/JesperSimonLind)

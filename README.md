@@ -17,7 +17,7 @@ GOOGLE_CLIENT_ID="[Your Google client id]"\
 GOOGLE_CLIENT_SECRET="[Your Google client secret]"
 
 3. Run Nodemon\
-nodemon`
+`nodemon`
 
 Visit localhost:8000 to view the project
 

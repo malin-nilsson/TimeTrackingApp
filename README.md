@@ -11,7 +11,7 @@ Time tracker where users can add hours to different categories, see updates from
 
 3. Create a .env\
 To run this application you need to have the following things in a .env file:\
-CONNECTION_STRING="[Your connection string]"\ 
+CONNECTION_STRING="[Your connection string]"\
 JWTSECRET="[Your jwt secret]"\
 GOOGLE_CLIENT_ID="[Your Google client id]"\ 
 GOOGLE_CLIENT_SECRET="[Your Google client secret]"

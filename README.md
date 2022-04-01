@@ -4,13 +4,20 @@ Time tracker where users can add hours to different categories, see updates from
 
 ## Installation
 1. Clone the repo\
-git clone https://github.com/malin-nilsson/TimeTrackingApp
+`git clone https://github.com/malin-nilsson/TimeTrackingApp`
 
 2. Install npm packages\
-npm install
+`npm install`
+
+3. Create a .env\
+To run this application you need to have the following things in a .env file:\
+CONNECTION_STRING="[Your connection string]"\ 
+JWTSECRET="[Your jwt secret]"\
+GOOGLE_CLIENT_ID="[Your Google client id]"\ 
+GOOGLE_CLIENT_SECRET="[Your Google client secret]"
 
 3. Run Nodemon\
-nodemon
+nodemon`
 
 Visit localhost:8000 to view the project
 
